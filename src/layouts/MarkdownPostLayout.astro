@@ -1,0 +1,14 @@
+---
+import BaseLayaout from "./BaseLayaout.astro";
+const { frontmatter } = Astro.props;
+const { title, description, pubDate, author, image} = frontmatter;
+
+---
+<BaseLayaout pageTitle = {title}>
+<p>Publicado el {pubDate.slice(0, 10)}</p>
+<p><em>{description}</em></p>
+<p>Escrito por {author}</p>
+<img src={image.url} width='300' alt={image.alt}>
+<hr>
+<slot />
+</BaseLayaout>
