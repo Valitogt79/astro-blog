@@ -1,0 +1,22 @@
+---
+import Social from "../components/Social.astro"
+const github = "Valitogt79";
+const linkedin = "in/oswaldoalonzo";
+const twitter = "@Rob_Alonzo79";
+--- 
+
+<footer>
+ <Social platform="github" username={github} />
+ <Social platform="twitter" username={twitter}/>
+ <Social platform="linkedin" username={linkedin}/>
+ 
+
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
